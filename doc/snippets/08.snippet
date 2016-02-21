@@ -1,0 +1,28 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Gulp 08</Title>
+    <Author>ERiDeM</Author>
+    <Shortcut>g08</Shortcut>
+    <Description>Gulp 08</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="Nodejs"><![CDATA[ // #-- SNIPPET 9: Async tasks (2/2) --#
+  var exec = require('child_process').exec;
+  exec('background work', function (err) {
+    setTimeout(function () {
+      gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Copying files'));
+      
+      gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
+      .pipe(gulp.dest('./dest'))     
+      .pipe(notify('Task: copy a file')); 
+      
+      cb();
+    }, 1000);
+  });  
+]]></Code>
+  </Snippet>
+</CodeSnippet>

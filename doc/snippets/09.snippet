@@ -1,0 +1,31 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Gulp 09</Title>
+    <Author>ERiDeM</Author>
+    <Shortcut>g09</Shortcut>
+    <Description>Gulp 09</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="Nodejs"><![CDATA[ var Q = require('q');
+  // do async stuff
+  var deferred = Q.defer();
+  setTimeout(function () {
+    gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Copying files'));
+    
+    gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
+             .pipe(gulp.dest('./dest'))
+             .pipe(notify('Task: copy a file')); 
+    
+    deferred.resolve();
+  }, 1000);
+  
+  return deferred.promise;
+
+  // #-- SNIPPET 10: Create a new plugin (pipe part) --#
+]]></Code>
+  </Snippet>
+</CodeSnippet>

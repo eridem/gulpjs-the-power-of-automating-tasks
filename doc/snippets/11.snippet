@@ -1,0 +1,21 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Gulp 10 (new file part)</Title>
+    <Author>ERiDeM</Author>
+    <Shortcut>g10</Shortcut>
+    <Description>Gulp 10 (pipe part)</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="Nodejs"><![CDATA[   var contentAsString = String(file.contents);
+    
+    var replacementRegex = new RegExp(from, "gi");
+    contentAsString = contentAsString.replace(replacementRegex, to);
+
+    file.contents = Buffer(contentAsString);
+]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,22 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Gulp 03</Title>
+    <Author>ERiDeM</Author>
+    <Shortcut>g03</Shortcut>
+    <Description>Gulp 03</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="Nodejs"><![CDATA[gulp.task('sayCheers', function () { // gulp sayCheers --name YOUR_NAME
+  var name = gutil.env.name || 'No name';
+  gutil.log(gutil.colors.red('Cheers'), gutil.colors.red(name));
+});
+
+// #-- TUTORIAL: What about debugging? http://doc/how-to-debug.png --#
+// #-- SNIPPET 4: Some images --#
+]]></Code>
+  </Snippet>
+</CodeSnippet>

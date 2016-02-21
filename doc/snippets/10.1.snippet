@@ -1,0 +1,27 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Gulp 10 (pipe part)</Title>
+    <Author>ERiDeM</Author>
+    <Shortcut>g10</Shortcut>
+    <Description>Gulp 10 (pipe part)</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="Nodejs"><![CDATA[ var replacement = require('./replacement.js');
+
+  gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Copying files'));
+  
+  gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
+         .pipe(replacement('DUCK', 'GULP'))
+
+         // #-- TUTORIAL: What will happen if we call replacement again?
+         //.pipe(replacement('Let', 'It'))
+             
+         .pipe(gulp.dest('./dest'))
+         .pipe(notify('Task: copyFiles')); 
+]]></Code>
+  </Snippet>
+</CodeSnippet>

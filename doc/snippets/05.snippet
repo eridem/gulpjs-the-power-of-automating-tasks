@@ -1,0 +1,35 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Gulp 05</Title>
+    <Author>ERiDeM</Author>
+    <Shortcut>g05</Shortcut>
+    <Description>Gulp 05</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="Nodejs"><![CDATA[gulp.task('daily:wakeUp', function () { 
+  gutil.log(gutil.colors.red('Daily:'), gutil.colors.red('Wake up'));
+});
+
+gulp.task('daily:takeShower', ['daily:wakeUp'], function () {
+  gutil.log(gutil.colors.red('Daily:'), gutil.colors.red('Take shower'));
+});
+
+gulp.task('daily:dressUp', [/*'daily:wakeUp',*/ 'daily:takeShower'], function () {
+  gutil.log(gutil.colors.red('Daily:'), gutil.colors.red('Dress up'));
+});
+
+gulp.task('letsgo', ['daily:dressUp'], function () {  // gulp letsgo
+  gutil.log(gutil.colors.red('Go go go!'));
+});
+
+// #-- TUTORIAL: What will happen if daily:wakeUp requires daily:takeShower?
+// #-- TUTORIAL: http://doc/04.png --#
+// #-- TUTORIAL: create 'src' folder --#
+// #-- SNIPPET 6: Watches and order --#
+]]></Code>
+  </Snippet>
+</CodeSnippet>

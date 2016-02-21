@@ -1,0 +1,18 @@
+{
+  "name": "GulpKeepLearning",
+  "version": "0.0.0",
+  "description": "GulpKeepLearning",
+  "main": "app.js",
+  "author": {
+    "name": "eridem",
+    "email": ""
+  },
+  "dependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "q": "^1.4.1",
+    "through2": "^2.0.1"
+  }
+}
