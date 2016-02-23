@@ -14,7 +14,7 @@
     mode: '0777'  // #-- TUTORIAL: http://permissions-calculator.org/ --#
   };
   
-  gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
+  return gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
                 .pipe(gulp.dest('./dest', options))
                 .pipe(notify('Task: copy a file'));
 

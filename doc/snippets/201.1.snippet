@@ -11,7 +11,7 @@
 
   gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Copying files'));
   
-  gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
+  return gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
          .pipe(replacement('DUCK', 'GULP'))
 
          // #-- TUTORIAL: What will happen if we call replacement again?

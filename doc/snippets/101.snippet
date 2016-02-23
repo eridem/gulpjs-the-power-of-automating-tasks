@@ -33,7 +33,7 @@ gulp.task('op:copyFiles', function () {
 
   gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Copying files'));
 
-  gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
+  return gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
     .pipe(gulp.dest('./dest'))
 
   // #-- TUTORIAL: What could happen if we add another destination? --#

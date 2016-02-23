@@ -17,7 +17,7 @@
     //base: './'
   };
   
-  gulp.src(['./src/**/*.txt', '!./src/**/*.dev'], options)
+  return gulp.src(['./src/**/*.txt', '!./src/**/*.dev'], options)
                 .pipe(gulp.dest('./dest'))
                 .pipe(notify('Task: copy a file'));  
 ]]></Code>
