@@ -1,36 +1,19 @@
 ﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>Gulp 06</Title>
-    <Author>ERiDeM</Author>
-    <Shortcut>g06</Shortcut>
-    <Description>Gulp 06</Description>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
       <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
   </Header>
   <Snippet>
-    <Code Language="Nodejs"><![CDATA[gulp.task('letsgoByWatch', function () { // gulp letsgo
+    <Code Language="Nodejs"><![CDATA[gulp.task('watcherCommon', function () {
   gulp.watch(['src/**/*'], ['letsgo']);
 });
 
-gulp.task('otherTestingWatches', function () {  // gulp letsgo
-  var watcher;
-  
-  watcher = gulp.watch(['src/**/*'], ['daily:wakeUp']);
-  
-  // #-- TUTORIAL: Which is the output of the following task? --#
-  //watcher = gulp.watch(['src/**/*'], ['daily:wakeUp', 'daily:takeShower']);
-  
-  // #-- TUTORIAL: Which is the output of the following task? --#
-  //watcher = gulp.watch(['src/**/*'], ['daily:wakeUp', 'daily:dressUp', 'daily:takeShower']);
-  
-  watcher.on('change', function (event) {
-    gutil.log(gutil.colors.red('Changes:'), gutil.colors.yellow(JSON.stringify(event)));  // type = [added|changed|deleted], path = "..."
-  });
-});
+// #-- SNIPPET 7: Sequential watchers --#
 
-// #-- SNIPPET 7: Let's start over! Clean up. Pipes. --#
+
 ]]></Code>
   </Snippet>
 </CodeSnippet>

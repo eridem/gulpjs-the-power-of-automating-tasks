@@ -59,10 +59,10 @@
     <Content Include="LICENSE.md" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\file04.dev" />
-    <Content Include="src\file03.dev" />
-    <Content Include="src\file02.txt" />
-    <Content Include="src\file01.txt" />
+    <Content Include="src\module\dev\file04.dev" />
+    <Content Include="src\module\dev\file03.dev" />
+    <Content Include="src\module\text\file02.txt" />
+    <Content Include="src\module\text\file01.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gulpfile.js" />
@@ -73,6 +73,9 @@
     <Folder Include="doc\" />
     <Folder Include="doc\snippets\" />
     <Folder Include="src\" />
+    <Folder Include="src\module\dev\" />
+    <Folder Include="src\module\" />
+    <Folder Include="src\module\text\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

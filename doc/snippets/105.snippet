@@ -1,0 +1,24 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Gulp 105</Title>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="Nodejs"><![CDATA[ gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Copying files'));
+  
+  var options = {
+    cwd: process.cwd(),
+    mode: '0777'  // #-- TUTORIAL: http://permissions-calculator.org/ --#
+  };
+  
+  gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
+                .pipe(gulp.dest('./dest', options))
+                .pipe(notify('Task: copy a file'));
+
+  // #-- SNIPPET 201: Create a new plugin (pipe part) --#  
+]]></Code>
+  </Snippet>
+</CodeSnippet>

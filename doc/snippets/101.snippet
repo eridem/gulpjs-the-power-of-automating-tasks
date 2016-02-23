@@ -1,0 +1,50 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Gulp 101</Title>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="Nodejs"><![CDATA['use strict';
+
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var del = require('del');
+var notify = require('gulp-notify');
+
+// #-- TUTORIAL: http://doc/05.png --#
+
+// #-- SNIPPET 201: Create a new plugin (new file part) --#
+
+gulp.task('op:cleanup', function () {
+  //#region Non interested for the example
+  del(['./dest', './dest2']);
+  //#endregion
+});
+
+gulp.task('op:dummy', function () {
+  gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Dummy'));
+});
+
+gulp.task('op:copyFiles', function () {
+  // #-- SNIPPET 102: Async tasks (1/2) --#
+
+  gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Copying files'));
+
+  gulp.src(['./src/**/*.txt', '!./src/**/*.dev'])
+    .pipe(gulp.dest('./dest'))
+
+  // #-- TUTORIAL: What could happen if we add another destination? --#
+  //  .pipe(gulp.dest('./dest2'))
+
+  .pipe(notify('Task: copy a file')); 
+});
+
+gulp.task('build', ['op:cleanup', 'op:copyFiles', 'op:dummy'], function () {
+  gutil.log(gutil.colors.red('Task:'), gutil.colors.yellow('Build success'));
+});
+]]></Code>
+  </Snippet>
+</CodeSnippet>
